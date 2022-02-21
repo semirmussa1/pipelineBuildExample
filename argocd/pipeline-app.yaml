@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pipeline-app
-  namespace: openshift-gitops
+  namespace: blueprint-pipeline2
 spec:
   destination:
     namespace: liberty-rest
@@ -31,7 +31,7 @@ spec:
   project: default
   source:
     path: build
-    repoURL: https://github.com/marrober/pipelineBuildExample.git
+    repoURL: https://github.com/semirmussa1/pipelineBuildExample.git
     targetRevision: acs
   syncPolicy:
     automated:
